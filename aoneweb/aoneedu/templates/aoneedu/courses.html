@@ -1,0 +1,73 @@
+{% extends 'aoneedu/base.html' %}
+
+{% block title %} COURSES {% endblock %}
+{% load static %}
+
+{% block content %} 
+
+
+
+
+
+
+<h3 class="text-center text-white mt-5">Training Courses</h3>
+<h4 class="text-center text-white">Acquire Skills For 21st Century</h4>
+<p class="text-center text-white">We offer a range of training courses to help you develop in-demand skills and advance your career. Our courses include:</p>
+
+<div class="row m-5 justify-content-center gy-1">
+  <div class="col-lg-3 col-12 mb-1 mb-sm-0">
+    <div class="card text-center">
+      <img src="{% static 'images/t1.jpg' %}" class="card-img-top" width="150" height="200" alt="..."> 
+      <div class="card-body">
+        <h5 class="card-title fw-bolder">CODING & WEB DEVELOPMENT</h5>
+        <p class="card-text fw-bolder">Learn to build dynamic websites and applications with our coding and web development course. Our expert instructors will guide you through the latest technologies and trends</p>
+        <a href="/reg" class="btn btn-primary fw-bolder">REGISTER WITH US</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-12">
+    <div class="card text-center">
+      <img src="{% static 'images/t3.jpg' %}" class="card-img-top" width="150" height="200" alt="..."> 
+      <div class="card-body">
+        <h5 class="card-title fw-bolder">AI & SOCIAL MEDIA MANAGEMENT</h5>
+        <p class="card-text fw-bolder">Stay ahead of the curve with our AI and social media management course. Learn to leverage AI tools and social media platforms to drive business growth and success.</p>
+        <a href="/reg" class="btn btn-primary fw-bolder">REGISTER WITH US</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-12">
+    <div class="card text-center">
+      <img src="{% static 'images/t4.jpg' %}" class="card-img-top" width="150" height="200" alt="..."> 
+      <div class="card-body">
+        <h5 class="card-title fw-bolder">CYBER SECURITY</h5>
+        <p class="card-text fw-bolder">Protect your digital assets with our cyber security course. Learn to identify and mitigate cyber threats, and develop a career in this in-demand field.</p>
+        <a href="/reg" class="btn btn-primary fw-bolder">REGISTER WITH US</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row m-5 justify-content-center">
+  <div class="col-lg-3 mb-3 mb-sm-0">
+    <div class="card text-center">
+      <img src="{% static 'images/t5.jpg' %}" class="card-img-top" width="150" height="200" alt="..."> 
+      <div class="card-body">
+        <h5 class="card-title fw-bolder">ETHICAL HACKING</h5>
+        <p class="card-text fw-bolder">Learn to identify and exploit vulnerabilities with our ethical hacking course. Our expert instructors will guide you through the latest techniques and tools.</p>
+        <a href="/reg" class="btn btn-primary fw-bolder">REGISTER WITH US</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card card text-center">
+      <img src="{% static 'images/t6.jpg' %}" class="card-img-top" width="150" height="200" alt="..."> 
+      <div class="card-body">
+        <h5 class="card-title fw-bolder">GRAPHICS DESIGNS</h5>
+        <p class="card-text fw-bolder">Unleash your creativity with our graphic design course. Learn to create stunning visuals and develop a career in this in-demand field.</p>
+        <a href="/reg" class="btn btn-primary fw-bolder">REGISTER WITH US</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

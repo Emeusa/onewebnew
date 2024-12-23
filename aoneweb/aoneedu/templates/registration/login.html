@@ -1,0 +1,61 @@
+{% extends 'aoneedu/base.html' %}
+
+{% block title %} A1 LOGIN {% endblock %}
+{% load static %}
+
+{% block loginone %}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="container bg-light" style="width: 450px; height: 500px;">
+
+    <h3 class="text-center fw-bold pt-3"> Login Into Your A1 Account </h3>
+
+    <div class="container shadow-lg mx-auto p-2 align-items-center justify-content-center">
+
+        <form method="POST" class="form-group m-5">
+            {% csrf_token %}
+            <label for="id_username" class="fw-bold fs-5">Email:</label>
+            <input type="text" name="username" class="form-control" required id="id_username">
+            <label for="id_password" class="fw-bold fs-5">Password:</label>
+            <input type="password" name="password" class="form-control mb-3" required id="id_password">
+            <button type="submit" class="btn btn-lg btn-success">Login</button>
+            <p class="fs-5">Don't have an account? Create one <a href="/register">here</a></p>
+        </form>
+
+
+    </div>
+
+    
+
+
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<div class="navbar navbar-expand-lg bg-dark navbar-dark fixed-bottom">
+  
+  <a class="navbar-brand p-3" href="/"><img src="{% static 'images/aonelogo.jpeg' %}" alt="" class="img-thumbnail" width="56" height="50"></a>
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 mt-3">
+    <li class="nav-item">
+      <a class="nav-link active fw-bolder" aria-current="page" href="/aboutus" >About Us</a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav gap-2 mt-lg-0 mt-3 mx-2 my-2">
+    <li class="nav-item">
+      <h4 class="text-white">Contact Us:</h4>
+      <i class="bi bi-telephone-fill text-primary fs-4 m-2">08022807672</i>
+       <a href="https://wa.me/message/EYAR4MZLZSYAL1" target="blank"><i class="bi bi-whatsapp text-success fs-4 m-2"></i></a>
+       <a href="https://www.facebook.com/profile.php?id=100057184460888" target="blank"><i class="bi bi-facebook text-primary fs-4 m-2"></i></a>
+       <a href=""><i class="bi bi-person-fill-exclamation fs-4 m-2"> Customer care</i></a>
+    </li>
+  </ul>
+
+</div>
+{% endblock %}

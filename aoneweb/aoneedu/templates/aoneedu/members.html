@@ -1,0 +1,184 @@
+
+{% extends 'aoneedu/base.html' %}
+{% load static %}
+
+{% block title %} A1 {% endblock %}
+
+{% block content %}
+
+
+
+<div class="container-xxl mg-0 mt-5">
+    <div class="container-xl mr-lg-5 pt-5 mt-5 align-items-center justify-content-center shadow-lg rounded" style="color: #008080;">
+
+        <h1 class="text-center mb-4">A1 EDUCATIONAL..</h1>
+
+        <div class="container">
+            <video onclick="play(event)" src="{% static 'videos\A1 Advert.mp4' %}" id="video"></video>
+            <div class="controls">
+                <button onclick="play(event)"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+                <button onclick="rewind(event)"><i class="fa fa-fast-backward"></i></button>
+                <div class="timeline">
+                    <div class="bar">
+                        <div class="inner"></div>
+                    </div>
+                </div>
+                <button onclick="forward(event)"><i class="fa fa-fast-forward"></i></button>
+                <button onclick="fullScreen(event)"><i class="fa fa-expand"></i></button>
+                <button onclick="download(event)"><i class="fa fa-cloud-download"></i></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+            <h2 id="content-header">
+                Meet the Team
+            </h2>
+
+
+        <div class="container mx-auto m-0 p-0">
+
+            <div class="row bg-white text-primary gx-5 gy-3">
+
+                <div class="col-6 shadow"> 
+                    <div class="profile1">
+                        <div class="profile-header">
+                                <img src="{% static 'images/doa.jpg' %}" class="media-image" alt="Director of Administration">
+                        </div>
+                        </div>
+                        <div class="name">
+                            Segun Fashanu
+                        </div>
+                        <div class="title personality">
+                            Director of Administration
+                        </div>
+                </div>
+                <div class="col-6 shadow">
+                    <div class="profile2">
+                        <div class="profile-header">
+                                <img src="{% static 'images/A1.jpg' %}" class="media-image" alt="snr consultant">
+                        </div>
+                        </div>
+                        <div class="name">
+                            CN Confidence
+                        </div>
+                        <div class="title personality">
+                            Snr consultant
+                        </div>
+                </div>
+                <div class="col-6 shadow">
+                    <div class="profile3">
+                        <div class="profile-header">
+                                <img src="{% static 'images/bd.jpg' %}" class="media-image" alt="Business Director">
+                        </div>
+                        </div>
+                        <div class="name">
+                            Kanu Bright Ahalachi
+                        </div>
+                        <div class="title personality">
+                            Business Director
+                        </div>
+                </div>
+                <div class="col-6 shadow">
+                    <div class="profile4">
+                        <div class="profile-header">
+                                <img src="{% static 'images/peb.jpg' %}"  class="media-image" alt="Educationist">
+                        </div>
+                        </div>
+                        <div class="name">
+                            Ikeri Monica
+                        </div>
+                        <div class="title personality">
+                            Biology
+                        </div>
+                </div>
+                <div class="col-6 shadow">
+                    <div class="profile5">
+                        <div class="profile-header">
+                                <img src="{% static 'images/eac.jpg' %}" class="media-image" alt="Educational Consultant">
+                            </div>
+                        </div>
+                        <div class="name">
+                            Oladimeji Olakunle Solomon
+                        </div>
+                        <div class="title personality">
+                            Educational Consultant
+                        </div>
+                       
+                </div>
+                <div class="col-6 shadow">
+                    <div class="profile6">
+                        <div class="profile-header">
+                            <img src="{% static 'images/hoe.jpg' %}" class="media-image" alt="Head of Engineering">
+                        </div>
+                    </div>
+                    <div class="name">
+                        Thompson Samuel
+                    </div>
+                    <div class="title personality">
+                        Engineering
+                    </div>
+                </div>
+                <div class="col-6 shadow">
+                    <div class="profile7">
+                        <div class="profile-header">
+                            <img src="{% static 'images/hoc.jpg' %}" class="media-image" alt="Head of Science">
+                        </div>
+                    </div>
+                    <div class="name">
+                        Omede Caleb Enejoh
+                    </div>
+                    <div class="title personality">
+                        Head of Science
+                    </div>
+                </div>
+        
+                <div class="col-6 shadow">
+                    <div class="profile9">
+                        <div class="profile-header">
+                            <img src="{% static 'images/eme.jpg' %}" class="media-image" alt="Web Developer">
+                        </div>
+                    </div>
+                    <div class="name">
+                        Emediong Stephen Peter
+                    </div>
+                    <div class="title personality">
+                        Web Developer
+                    </div>
+                </div>
+                <div class="col-6 shadow">
+                    <div class="profile10">
+                        <div class="profile-header">
+                            <img src="{% static 'images/asi.jpg' %}" class="media-image" alt="Assistant Web Developer">
+                        </div>
+                    </div>
+                    <div class="name">
+                        Esewi Praise
+                    </div>
+                    <div class="title personality">
+                        Asst. Web Developer
+                    </div>
+                </div>
+                
+                <div class="col-6 shadow">
+                    <div class="profile12">
+                        <div class="profile-header">
+                            <img src="{% static 'images/d7.jpg' %}" class="media-image" alt="Educationist">
+                        </div>
+                    </div>
+                    <div class="name">
+                        Chuks Wisdom
+                    </div>
+                    <div class="title personality">
+                        Professional Educationist in Coding
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    {% endblock %}

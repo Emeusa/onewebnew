@@ -1,0 +1,77 @@
+{% extends 'aoneedu/base.html' %}
+
+{% block title %} Your forms, {{user}} {% endblock %} 
+
+
+{% load static %}
+
+
+
+
+
+{% block content %} 
+
+<div class="container bg-light mg-0">
+    <div class="container bg-light mr-lg-5 pt-5 mt-5 align-items-center justify-content-center shadow-lg rounded text-dark fw-bolder fs-3-lg text-center" style="color: #008080;"> 
+
+        <h1 class="fw-bold mb-5">{{user.email}}'s Form</h1>
+            
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th class="fw-bold fs-4">Full Name</th>
+                        <th class="fw-bold fs-4">Email</th>
+                        <th class="fw-bold fs-4">Edit Form</th>
+                        
+                    </tr>
+                </thead>
+               
+                <tbody>
+                    {% for exform in user.formowner.all %}
+                <tr class="fw-normal">
+                <td>
+                    <a href="{% url 'listform' exform.id %}" class="nav-link">
+                    {{exform}} </a>
+                </td>
+                <td>
+                    <a href="{% url 'listform' exform.id %}" class="nav-link">
+                    {{exform.email}} 
+                </td>
+                <td>
+                    <a href="{% url 'updateforms' exform.id %}" class="nav-link">
+                    Update 
+                </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+               </table>
+
+               
+
+       
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="navbar navbar-expand-lg bg-dark navbar-dark fixed-bottom">
+  
+  <a class="navbar-brand p-3" href="/"><img src="{% static 'images/aonelogo.jpeg' %}" alt="" class="img-thumbnail" width="56" height="50"></a>
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+    <li class="nav-item">
+      <a class="nav-link active fw-bolder" aria-current="page" href="/" >About Us</a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav gap-2 mt-lg-0 mt-3 mx-2 my-2">
+    <li class="nav-item">
+      <h4 class="text-white">Contact Us:</h4>
+      <i class="bi bi-telephone-fill text-primary fs-4 m-2">08022807672</i>
+       <a href=""><i class="bi bi-whatsapp text-success fs-4 m-2"></i></a>
+       <a href=""><i class="bi bi-facebook text-primary fs-4 m-2"></i></a>
+       <a href=""><i class="bi bi-person-fill-exclamation fs-4 m-2"> Customer care</i></a>
+    </li>
+  </ul>
+
+</div>
+{% endblock %}

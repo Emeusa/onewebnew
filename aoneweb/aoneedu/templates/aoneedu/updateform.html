@@ -1,0 +1,528 @@
+{% extends 'aoneedu/base.html' %}
+
+{% block title %} UPDATE YOUR FORM {% endblock %}
+{% load static %}
+
+{% block content %} 
+
+
+
+
+<div class=" container-xxl d-flex bg-light text-center align-items-center justify-content-center mt-lg-3 mg-0 pd-0 gap-2">
+  <img src="{% static 'images/aonelogo.jpeg' %}" alt="" class="img-thumbnail mg-end mt-3" width="80" height="85">
+  <h1 class="text-primary">
+    <ul class="fw-bold mt-3" style="list-style: none;">
+      <li style="color: #1d4a8b;">A1 EDUCATIONAL...</li>
+    </ul>  
+  </h1>
+</div>
+
+<div class="container-xxl d-flex bg-light mg-0">
+  <div class="container-xl d-flex bg-light mr-lg-5 pt-5 mt-5 align-items-center justify-content-center shadow-lg rounded" style="color: #008080;">
+
+    <form method="post" class="form-group">
+      <h2 class="mr-5 text-center"> REGISTRATION FORM FOR ALL EXAMS</h2>
+
+        {% csrf_token %}  
+
+        <ul>
+          <li class="d-flex gap-1 mt-5 mb-5">
+
+            <label for="name"><h5>Name:</h5></label>
+            {{ form.last_name }}
+
+            {{ form.first_name }}
+
+            {{ form.middle_name }}
+          </li>
+        </ul>
+
+
+        <ul>
+          <li class="d-flex gap-2 mb-5">
+            <label for="name"><h5>Date of Birth:</h5></label>
+            <div class="row g-3">
+          <div class="col-sm-10">
+
+            {{ form.date_of_birth }}
+          </div>
+        </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="d-flex gap-2 mb-5">
+            <label for="name"><h5>Gender:</h5></label>
+            <div class="row">
+              <div class="col-12">
+                {{ form.gender }}
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <ul>
+          <li class="d-flex gap-1 mb-5">
+            <label for="name"><h6>Genotype:</h6></label>
+            <div class="row row-col-lg-auto g-1 align-items-center gap-1">
+              <div class="col-lg-5 col-5">
+                {{ form.genotype }}
+              </div>
+              <div class="col-lg-5 col-6">
+                {{ form.b_group }}
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <ul>
+          <li class="d-flex gap-1 mb-5">
+            <label for="name"><h6>Marital Status:</h6></label>
+            <div class="row gx-1">
+              <div class="col-3">
+
+                {{ form.marital }}
+
+              </div>
+              <div class="col-9">
+                {{ form.madien_name }}
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        
+        <ul>
+          <li class="d-flex gap-2 mb-5">
+            <label for="name"><h5>Email Address:</h5></label>
+            <div class="row g-0">
+              <div class="col-12">
+            {{ form.email }}
+          </li>
+        </ul>
+
+        <ul>
+          <li class="d-flex gap-2 mb-5">
+            <label for="name"><h5>Contact Address:</h5></label>
+            <div class="row g-3">
+              <div class="col-12">
+            {{ form.contact_add }}
+          </li>
+        </ul>   
+
+        <ul>
+          <li class="d-flex gap-2 mb-5">
+            <label for="name"><h5>NIN:</h5></label>
+            <div class="row g-3">
+              <div class="col-12">
+                {{ form.nin }}
+          </li>
+        </ul>   
+
+
+        <ul>
+          <li class="d-flex gap-2 mb-5">
+            <label for="name"><h5>Phone Number:</h5></label>
+            <div class="row g-3">
+              <div class="col-sm-10">
+            {{ form.mobile_number }}
+          </li>
+        </ul>
+        
+        <ul>
+          <li class="d-flex gap-2 mb-5">
+            <label for="name"><h5>Nationality:</h5></label>
+            <div class="row g-3">
+              <div class="col-sm-10">
+            {{ form.nationality }}
+          </li>
+        </ul>
+
+        <ul>
+          <li class="d-flex gap-2 mb-5">
+            <label for="name"><h5>State:</h5></label>
+            <div class="row g-3">
+              <div class="col-sm-10">
+            {{ form.state_of_origin }}
+          </li>
+        </ul>
+
+        <ul>
+          <li class="d-flex gap-2 mb-5">
+            <label for="name"><h5>L.G.A:</h5></label>
+            <div class="row">
+              <div class="col-12">
+            {{ form.local_gov }}
+          </li>
+        </ul>
+
+        <h3 class="text-center"> Parent or Guadiance Information</h3>
+
+
+        <ul>
+          <li class="d-flex gap-1">
+            <label for="name"><h5>Name:</h5></label>
+            <div class="row g-1">
+              <div class="col-sm-8">
+                {{ form.parent_name }}
+              </div>
+              
+              <div class="col-lg-4 col-6">
+                {{ form.occupation }}
+              </div>
+          </li>
+        </ul>
+
+        
+        <ul>
+          <li class="d-flex gap-lg-1 gap-1 mb-5">
+            <label for="name"><h6>Office Address:</h6></label>
+            <div class="row gx-1 gy-1">
+              
+              <div class="col-lg-4">
+                {{ form.office_add }}
+              </div>
+              <div class="col-lg-4">
+                {{ form.phone_no }}
+              </div>
+              <div class="col-lg-4">
+                {{ form.parent_mail }}
+              </div>
+              
+            </div>
+            
+          </li>
+        </ul>
+
+
+        <ul>
+          <li class="d-flex gap-1">
+            <label for="name"><h6>Choose Exam That You want to Register:</h6></label>
+            <div class="row">
+              <div class="col">
+            {{ form.alevel_pro }}
+          </li>
+        </ul>
+
+        
+
+        <ul>
+          <li class="d-flex gap-2">
+            <label for="name"><h5>Profile Code:</h5></label>
+            <div class="row">
+              <div class="col-12">
+            {{ form.profile_code }}
+          </li>
+        </ul>
+        
+        
+        <ul>
+          <li class="d-flex gap-lg-1 gap-0 mb-5">
+            <label for="name"><h5>Prefered Exam State:</h5></label>
+            <div class="row gx-1">
+              
+              <div class="col-3">
+                {{ form.prefered_ex_state }}
+              </div>
+              <div class="col-5">
+                {{ form.exam_town }}
+              </div>
+            </div> 
+          </li>
+        </ul>
+
+        <h4>CHOICES OF INSTITUTION</h4>
+        <ul>
+          <li class="d-flex gap-1">
+            <label for="name"><h6>First Choice:</h6></label>
+            <div class="row gx-1">
+              <div class="col-6">
+                  {{ form.first_choices }}
+              </div>
+              <div class="col-6">
+                 {{ form.programme_one }}
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <ul>
+          <li class="d-flex gap-lg-1 gap-0 mb-5">
+            <label for="name"><h6>Second Choice:</h6></label>
+            <div class="row gx-1">
+              <div class="col-6">
+                  {{ form.second_choices }}
+              </div>
+              <div class="col-6">
+                 {{ form.programme_two }}
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <h4>UTME subjects:</h4>
+        <ul class="mt-3">
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>1.</h3></label>
+            <div class="row">
+              <div class="col-12">
+            {{ form.utme_sub_one }}
+          </li>
+        </ul>
+        
+        <ul>
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>2.</h3></label>
+            <div class="row">
+              <div class="col-12">
+            {{ form.utme_sub_two }}
+          </li>
+        </ul>
+        <ul>
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>3.</h3></label>
+            <div class="row">
+              <div class="col-12">
+            {{ form.utme_sub_three }}
+          </li>
+        </ul>
+        <ul>
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>4.</h3></label>
+            <div class="row">
+              <div class="col-12">
+            {{ form.utme_sub_four }}
+          </li>
+        </ul>
+
+        <h4 class="text-center">O'Level Information</h4>
+
+        <ul>
+          <li class="d-flex gap-lg-1 gap-1">
+            <label for="name"><h6>Secondary School:</h6></label>
+            <div class="row gx-1 gap-2">
+              
+              <div class="col-lg-4">
+                {{ form.name_of_sec }}
+              </div>
+              <div class="col-lg-1 col-2">
+                <h6>Exam Type:</h6>
+                
+              </div>
+              <div class="col-lg-2 col-9">
+                {{ form.exam_type }}
+              </div>
+              <div class="col-lg-2 col-3">
+                <h6>Registration Mode:</h6>
+                
+              </div>
+              <div class="col-lg-2 col-5">
+                {{ form.reg_mode }}
+              </div>
+              
+            </div>
+            
+          </li>
+        </ul>
+
+        <ul>
+          <li class="d-flex gap-lg-1 gap-0 mb-5">
+            <label for="name"><h6>Exam Year:</h6></label>
+            <div class="row gx-1 gap-2">
+              
+              <div class="col-lg-3 col-4">
+                {{ form.yr_of_exam }}
+              </div>
+
+              <div class="col-lg-2 col-4">
+                {{ form.serial_no }}
+              </div>
+
+              <div class="col-lg-2 col-3">
+                {{ form.pin_no }}
+              </div>
+              
+            </div>
+            
+          </li>
+        </ul>
+        
+        <ul>
+          <li class="d-flex gap-1 mb-5">
+            <label for="name"><h6>Exam Number:</h6></label>
+            <div class="row gx-1">
+              <div class="col-lg-6 col-4">
+                  {{ form.exam_no }}
+              </div>
+              <div class="col-lg-5 col-7">
+                 {{ form.num_of_sit }}
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        
+
+        <h4>O'Level Subjects:</h4>
+        <ul>
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>1.</h3></label>
+            <div class="row">
+              <div class="col-6">
+                {{ form.olevel_sub_one }}
+              </div>
+              <div class="col-2">
+                <h5>Grade:</h5>
+                
+              </div>
+                <div class="col-4">
+                  {{ form.grade1 }}
+                </div>
+            </div>
+          </li>
+        </ul>
+        
+        <ul>
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>2.</h3></label>
+            <div class="row">
+              <div class="col-6">
+                {{ form.olevel_sub_two }}
+              </div>
+              <div class="col-2">
+              <h5>Grade:</h5>
+            
+              </div>
+                <div class="col-4">
+                  {{ form.grade2 }}
+                </div>
+            </div>
+          </li>
+        </ul>
+
+        <ul>
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>3.</h3></label>
+            <div class="row">
+              <div class="col-6">
+            {{ form.olevel_sub_three }}
+          </div>
+          <div class="col-2">
+            <h5>Grade:</h5>
+            
+          </div>
+            <div class="col-4">
+              {{ form.grade3 }}
+            </div>
+        </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>4.</h3></label>
+            <div class="row">
+              <div class="col-6">
+            {{ form.olevel_sub_four }}
+          </div>
+          <div class="col-2">
+            <h5>Grade:</h5>
+            
+          </div>
+            <div class="col-4">
+              {{ form.grade4 }}
+            </div>
+        </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>5.</h3></label>
+            <div class="row">
+              <div class="col-6">
+            {{ form.olevel_sub_five }}
+          </div>
+          <div class="col-2">
+            <h5>Grade:</h5>
+            
+          </div>
+            <div class="col-4">
+              {{ form.grade5 }}
+            </div>
+        </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>6.</h3></label>
+            <div class="row">
+              <div class="col-6">
+            {{ form.olevel_sub_six }}
+          </div>
+          <div class="col-2">
+            <h5>Grade:</h5>
+            
+          </div>
+            <div class="col-4">
+              {{ form.grade6 }}
+            </div>
+        </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>7.</h3></label>
+            <div class="row">
+              <div class="col-6">
+            {{ form.olevel_sub_sev }}
+          </div>
+          <div class="col-2">
+            <h5>Grade:</h5>
+            
+          </div>
+            <div class="col-4">
+              {{ form.grade7 }}
+            </div>
+        </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>8.</h3></label>
+            <div class="row">
+              <div class="col-6">
+            {{ form.olevel_sub_eig }}
+          </div>
+          <div class="col-2">
+            <h5>Grade:</h5>
+            
+          </div>
+            <div class="col-4">
+              {{ form.grade8 }}
+            </div>
+        </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="d-flex gap-3 mb-5">
+            <label for="name"><h3>9.</h3></label>
+            <div class="row">
+              <div class="col-6">
+            {{ form.olevel_sub_nin }}
+          </div>
+          <div class="col-2">
+            <h5>Grade:</h5>
+            
+          </div>
+            <div class="col-4">
+              {{ form.grade9 }}
+            </div>
+        </div>
+          </li>
+        </ul>
+             
+        <button type="submit" value="Update" class="btn btn-success m-2 btn-lg">Register</button>
+    </form>
+    </div>
+  </div>
+
+{% endblock %}
+

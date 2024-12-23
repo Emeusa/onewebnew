@@ -1,0 +1,418 @@
+{% extends 'aoneedu/base.html' %}
+
+{% block title %} {{ls}} {% endblock %}
+
+{% load static %}
+
+
+
+{% block content %} 
+
+<div class="container-xxl bg-light mg-0">
+     <div class="container-xl bg-light mr-lg-5 pt-5 mt-5 align-items-center justify-content-center shadow-lg rounded text-dark fw-bolder text-capitalize fs-3" style="color: #008080;">
+
+               <h1 class="text-center fw-bolder">{{ls}}</h1>
+
+               <table class="table fs-5 mt-5">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-success">Surname</th>
+                                    <th scope="col" class="text-success">First Name</th>
+                                    <th scope="col" class="text-success">Middle Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="fw-normal">
+                                    <td>{{ ls.last_name }}</td>
+                                    <td>{{ ls.first_name }}</td>
+                                    <td>{{ ls.middle_name }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                          <table class="table fs-5">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-success">Date of Birth</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="fw-normal">
+                                    <td>{{ ls.date_of_birth }}</td>
+                                </tr>
+                            </tbody>
+                          </table>
+
+                          <table class="table fs-5">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-success">Gender</th>
+                                    <th scope="col" class="text-success">Genotype</th>
+                                    <th scope="col" class="text-success">Blood Group</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="fw-normal">
+                                    <td>{{ ls.gender }}</td>
+                                    <td>{{ ls.genotype }}</td>
+                                    <td>{{ ls.b_group }}</td>
+                                </tr>
+                            </tbody>
+                          </table>
+
+                          <table class="table fs-5">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-success">Marital Status</th>
+                                    <th scope="col" class="text-success">Madiesn name(if married)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="fw-normal">
+                                    <td>{{ ls.marital }}</td>
+                                    <td>{{ ls.madien_name }}</td>
+                                </tr>
+                            </tbody>
+                          </table>
+
+                          <table class="table fs-5">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-success">Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="fw-normal text-lowercase">
+                                    <td>{{ ls.email }}</td>
+                                </tr>
+                            </tbody>
+                          </table>
+   
+
+                      <table class="table fs-6">
+
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-success">Contact Address</th>
+                                <th scope="col" class="text-success">NIN</th>
+                                <th scope="col" class="text-success">Mobile Number</th>
+                            </tr>
+                        </thead>
+
+                        <tr class="fw-normal">
+
+                            <td>{{ ls.contact_add }}</td>
+                            <td>{{ ls.nin }}</td>
+                            <td>{{ ls.mobile_number }}</td>
+                        </tr>
+                      </table>
+
+
+                      <table class="table fs-6 mb-5">
+
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-success">Nationality</th>
+                                <th scope="col" class="text-success">State of Origin</th>
+                                <th scope="col" class="text-success">L.G.A</th>
+                            </tr>
+                        </thead>
+
+                        <tr class="fw-normal">
+
+                            <td>{{ ls.nationality }}</td>
+                            <td>{{ ls.state_of_origin }}</td>
+                            <td>{{ ls.local_gov }}</td>
+                        </tr>
+                      </table>
+            
+                      <h3 class="text-center fw-bold"> Parent or Guadiance Information</h3>
+            
+                      <table class="table fs-6">
+                        <thead>
+                            <tr>
+
+                                <th scope="col" class="text-success"> Parent/Guadiance Name</th>
+                                <th scope="col" class="text-success">Occupation</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw-normal">
+
+                                <td>{{ ls.parent_name }}</td>
+                                <td>{{ ls.occupation }}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+
+                      <table class="table fs-6 mb-5">
+
+                        <thead>
+                            <tr>
+
+                            <th scope="col" class="text-success">Office Address</th>
+                            <th scope="col" class="text-success">Phone Number</th>
+                            <th scope="col" class="text-success">Email Address</th>
+
+                            </tr>
+                            
+                        </thead>
+
+                        <tbody>
+
+                            <tr class="fw-normal">
+
+                                <td>{{ ls.office_add }}</td>
+                                <td>{{ ls.phone_no }}</td>
+                                <td class="text-lowercase">{{ ls.parent_mail }}</td>
+                            </tr>
+
+                        </tbody>
+                      </table>
+
+                      
+                      <table class="table fs-5">
+
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-success">Registered Exam</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw-normal">
+                                <td>{{ ls.alevel_pro }}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+                      
+                      <table class="table fs-5">
+
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-success">Profile Code</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw-normal">
+                                <td>{{ ls.profile_code }}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+
+                      
+                      <table class="table fs-6 mb-5">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-success"> Prefered Exam State</th>
+                                <th scope="col" class="text-success">Exam Town</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw-normal">
+                                <td>{{ ls.prefered_ex_state  }}</td>
+                                <td>{{ ls.exam_town }}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+            
+                      <h4 class="text-center fw-bold">CHOICES OF INSTITUTION</h4>
+
+                       
+                      <table class="table fs-6">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-success">First Choice</th>
+                                <th scope="col" class="text-success">Programme of Study</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw-normal">
+                                <td>{{ ls.first_choices }}</td>
+                                <td>{{ ls.programme_one }}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+                       
+                      <table class="table fs-6 mb-5">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-success">Second Choice</th>
+                                <th scope="col" class="text-success">Programme of Study</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw-normal">
+                                <td>{{ ls.second_choices }}</td>
+                                <td>{{ ls.programme_two }}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+            
+                      <h4 class="text-center fw-bold">UTME subjects:</h4>
+
+                      <table class="table table-striped fs-6">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-success">NO.</th>
+                                <th scope="col" class="text-success">Subjects</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr class="fw-normal fs-5">
+                                <th scope="row">1.</th>
+                                <td>{{ ls.utme_sub_one }}</td>
+                            </tr>
+
+                            <tr class="fw-normal fs-5">
+                                <th scope="row">2.</th>
+                                <td>{{ ls.utme_sub_two }}</td>
+                            </tr>
+
+                            <tr class="fw-normal fs-5">
+                                <th scope="row">3.</th>
+                                <td>{{ ls.utme_sub_three }}</td>
+                            </tr>
+
+                            <tr class="fw-normal fs-5">
+                                <th scope="row">4.</th>
+                                <td>{{ ls.utme_sub_four }}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+            
+                      <h4 class="text-center fw-bold">O'Level Information</h4>
+
+                      <table class="table fs-6">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-success">Secondary School</th>
+                                <th scope="col" class="text-success">Exam Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw-normal">
+                                <td>{{ ls.name_of_sec }}</td>
+                                <td>{{ ls.exam_type }}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+
+                      <table class="table fs-6">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-success">Registration Mode</th>
+                                <th scope="col" class="text-success">Exam Year</th>
+                                <th scope="col" class="text-success">Number of Sitting</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw-normal">
+                                <td>{{ ls.reg_mode }}</td>
+                                <td>{{ ls.yr_of_exam }}</td>
+                                <td>{{ ls.num_of_sit }}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+
+                      <table class="table fs-6 mb-5">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-success">Serial Number</th>
+                                <th scope="col" class="text-success">Pin Number</th>
+                                <th scope="col" class="text-success">Rxam Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fw-normal">
+                                <td>{{ ls.serial_no }}</td>
+                                <td>{{ ls.pin_no}}</td>
+                                <td>{{ ls.exam_no }}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+
+                      
+            
+                      <h4 class="text-center fw-bold">O'Level Subjects:</h4>
+
+                      
+                      <table class="table table-striped fs-6">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-success">NO.</th>
+                                <th scope="col" class="text-success">Subjects</th>
+                                <th scope="col" class="text-success">Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr class="fw-normal">
+                                <th scope="row">1.</th>
+                                <td>{{ ls.olevel_sub_one }}</td>
+                                <td>{{ ls.grade1 }}</td>
+                            </tr>
+
+                            <tr class="fw-normal">
+                                <th scope="row">2.</th>
+                                <td>{{ ls.olevel_sub_two }}</td>
+                                <td>{{ ls.grade2 }}</td>
+                            </tr>
+
+                            <tr class="fw-normal">
+                                <th scope="row">3.</th>
+                                <td>{{ ls.olevel_sub_three }}</td>
+                                <td>{{ ls.grade3 }}</td>
+                            </tr>
+
+                            <tr class="fw-normal">
+                                <th scope="row">4.</th>
+                                <td>{{ ls.olevel_sub_four }}</td>
+                                <td>{{ ls.grade4 }}</td>
+                            </tr>
+
+                            <tr class="fw-normal">
+                                <th scope="row">5.</th>
+                                <td>{{ ls.olevel_sub_five }}</td>
+                                <td>{{ ls.grade5 }}</td>
+                            </tr>
+
+                            <tr class="fw-normal">
+                                <th scope="row">6.</th>
+                                <td>{{ ls.olevel_sub_six }}</td>
+                                <td>{{ ls.grade6 }}</td>
+                            </tr>
+
+                            <tr class="fw-normal">
+                                <th scope="row">7.</th>
+                                <td>{{ ls.olevel_sub_sev }}</td>
+                                <td>{{ ls.grade7 }}</td>
+                            </tr>
+
+                            <tr class="fw-normal">
+                                <th scope="row">8.</th>
+                                <td>{{ ls.olevel_sub_eig }}</td>
+                                <td>{{ ls.grade8 }}</td>
+                            </tr>
+
+                            <tr class="fw-normal">
+                                <th scope="row">9.</th>
+                                <td>{{ ls.olevel_sub_nin }}</td>
+                                <td>{{ ls.grade9 }}</td>
+                            </tr>
+                        </tbody>
+                      </table>
+                     
+        
+
+</div>
+   
+{% endblock %}
+
+
